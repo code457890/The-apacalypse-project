@@ -82,9 +82,9 @@ func craft():
 		if can_craft:
 			print(grid_counts, required_counts)
 			# Add the crafted item(s)
-			for _i in range(recipe_item.craft_amount):
-				add_item(recipe_item, recipe_item.durability)
-			
+			for item in recipe_item.craft_amount:
+				add_item(item, item.durability-5 if item.type in load("res://item.gd").tools else item.durability)
+			add_item(recipe_item, recipe_item.durability)
 			# Remove ingredients from the inventory/grid
 			for ingredient in recipe_item.recipe:
 				remove_item(ingredient)
