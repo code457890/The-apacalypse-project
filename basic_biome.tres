@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="BiomeData" format=3 uid="uid://dlt35d34kv3xn"]
+
+[ext_resource type="Script" uid="uid://eo1j24l1xv7h" path="res://biome.gd" id="1_1ukif"]
+[ext_resource type="PackedScene" uid="uid://dqooqnuv50usj" path="res://basic_biome.tscn" id="1_t63dq"]
+
+[resource]
+script = ExtResource("1_1ukif")
+name = "Basic Biome"
+scene = ExtResource("1_t63dq")
+metadata/_custom_type_script = "uid://eo1j24l1xv7h"

@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://whudqy4bdbsq"]
+
+[ext_resource type="PackedScene" uid="uid://bntxud0w6ofbr" path="res://grape_vine.tscn" id="1_235bv"]
+[ext_resource type="Script" uid="uid://wgg5fk62cl4a" path="res://item.gd" id="1_exrgy"]
+[ext_resource type="Script" uid="uid://b2okcvsdhbro" path="res://plantplaceable.gd" id="1_q6yau"]
+[ext_resource type="Texture2D" uid="uid://bahe0qhhrk3tj" path="res://Untitled11.png" id="2_235bv"]
+
+[sub_resource type="Resource" id="Resource_j0oao"]
+script = ExtResource("1_q6yau")
+scene = ExtResource("1_235bv")
+tags = Array[String](["tree fungal patch"])
+metadata/_custom_type_script = "uid://b2okcvsdhbro"
+
+[resource]
+script = ExtResource("1_exrgy")
+name = "Grapevine seeds"
+description = "grapevine seeds to plant on trees."
+icon = ExtResource("2_235bv")
+recipe = Array[Resource]([null])
+type = 3
+effect = SubResource("Resource_j0oao")
+metadata/_custom_type_script = "uid://wgg5fk62cl4a"

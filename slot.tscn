@@ -1,0 +1,27 @@
+[gd_scene load_steps=2 format=3 uid="uid://bputgdgewx3xh"]
+
+[ext_resource type="Script" uid="uid://n6vvl6j5b0j0" path="res://slot.gd" id="1_c24ra"]
+
+[node name="slot" type="PanelContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Icon" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(40, 40)
+layout_mode = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 2
+script = ExtResource("1_c24ra")
+
+[node name="ProgressBar" type="ProgressBar" parent="Control"]
+layout_mode = 0
+offset_top = 32.0
+offset_right = 40.0
+offset_bottom = 43.0
+show_percentage = false
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
+[connection signal="gui_input" from="Control" to="Control" method="_on_gui_input"]

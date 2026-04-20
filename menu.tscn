@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://c1ufqwqxoh4d3"]
+
+[ext_resource type="Script" uid="uid://cw7s2pckjfp0r" path="res://menu.gd" id="1_mae5d"]
+[ext_resource type="Texture2D" uid="uid://deoaaq5pm37en" path="res://play button.png" id="1_ouk20"]
+[ext_resource type="Texture2D" uid="uid://cu08iyqsfpywl" path="res://Untitled.png" id="2_mae5d"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_4hy44"]
+font_size = 72
+font_color = Color(0, 0, 0, 1)
+
+[node name="menu" type="Control" unique_id=390843022]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mae5d")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=609189517]
+layout_mode = 0
+offset_left = -367.0
+offset_top = -256.0
+offset_right = 1465.0
+offset_bottom = 859.0
+texture = ExtResource("2_mae5d")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=725317830]
+layout_mode = 0
+offset_right = 1147.0
+offset_bottom = 651.0
+
+[node name="Label" type="Label" parent="VBoxContainer" unique_id=1123002673]
+layout_mode = 2
+text = "game"
+label_settings = SubResource("LabelSettings_4hy44")
+
+[node name="Button" type="Button" parent="." unique_id=82709892]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 363.0
+offset_right = 1146.0
+offset_bottom = 579.0
+icon = ExtResource("1_ouk20")
+icon_alignment = 1
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

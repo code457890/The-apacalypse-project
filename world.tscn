@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://bcq3l0uo28mrj"]
+
+[ext_resource type="Script" uid="uid://dpv784o1g1ayx" path="res://player.gd" id="1_f3sb7"]
+[ext_resource type="Script" uid="uid://twaq3w603okh" path="res://world.gd" id="1_ic0uy"]
+[ext_resource type="PackedScene" uid="uid://bhwvc7rieo13o" path="res://inventory.tscn" id="3_tlwt5"]
+[ext_resource type="Script" uid="uid://wgg5fk62cl4a" path="res://item.gd" id="4_gbfbk"]
+[ext_resource type="PackedScene" uid="uid://qgk2if58b1u1" path="res://apple_tree.tscn" id="5_036b0"]
+[ext_resource type="Resource" uid="uid://crgr0326x2ojs" path="res://leaf.tres" id="5_ioo17"]
+[ext_resource type="Resource" uid="uid://c0lyptswmqcc1" path="res://flimsy rope.tres" id="6_ioo17"]
+[ext_resource type="Resource" uid="uid://ctynvhdixmedv" path="res://flimsy_axe.tres" id="7_gbfbk"]
+[ext_resource type="Script" uid="uid://hb5kh2qs26og" path="res://world_environment.gd" id="9_wse8f"]
+[ext_resource type="PackedScene" uid="uid://mtnp074qk3yi" path="res://forest_biome.tscn" id="11_ic0uy"]
+[ext_resource type="PackedScene" uid="uid://dtp523pwu1j1t" path="res://ground_item_gravity.tscn" id="12_2o6r5"]
+[ext_resource type="PackedScene" uid="uid://dqooqnuv50usj" path="res://basic_biome.tscn" id="12_k3n1d"]
+[ext_resource type="Resource" uid="uid://whudqy4bdbsq" path="res://grape_seed.tres" id="13_70uel"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_fj7yv"]
+
+[sub_resource type="Environment" id="Environment_ioo17"]
+fog_enabled = true
+fog_light_color = Color(0, 0.53333336, 1, 1)
+fog_density = 0.0
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ic0uy"]
+albedo_color = Color(1, 1, 0.53333336, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_k3n1d"]
+material = SubResource("StandardMaterial3D_ic0uy")
+
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_2o6r5"]
+data = PackedVector3Array(-0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, -0.5, 0.5, -0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, 0.5, -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, 0.5, 0.5, -0.5, 0.5, -0.5, -0.5, -0.5, 0.5, -0.5, 0.5, 0.5, -0.5, -0.5, -0.5, -0.5, -0.5)
+
+[node name="Node3D" type="Node3D" unique_id=660552366]
+script = ExtResource("1_ic0uy")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1759555995]
+transform = Transform3D(-0.013089566, -0.043615658, 0.99896276, 0, 0.99904835, 0.043619394, -0.99991435, 0.00057095895, -0.013077109, 3.1744747, 4.9048843, 3.9329777)
+
+[node name="player" type="CharacterBody3D" parent="." unique_id=220001115 groups=["player"]]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 0)
+script = ExtResource("1_f3sb7")
+
+[node name="player" type="CollisionShape3D" parent="player" unique_id=817806888]
+transform = Transform3D(-0.013089566, -0.043615654, 0.99896264, 0, 0.99904823, 0.04361939, -0.99991435, 0.0005709589, -0.013077107, 0, 0, 0)
+shape = SubResource("CapsuleShape3D_fj7yv")
+
+[node name="Camera3D" type="Camera3D" parent="player" unique_id=1706834292]
+transform = Transform3D(-0.013089566, -0.043615654, 0.99896264, 0, 0.99904823, 0.04361939, -0.99991435, 0.0005709589, -0.013077107, 0, 0.65, 0)
+
+[node name="RayCast3D" type="RayCast3D" parent="player/Camera3D" unique_id=993624211]
+exclude_parent = false
+target_position = Vector3(0, 0, -10)
+collide_with_areas = true
+
+[node name="CanvasLayer" parent="." unique_id=171392205 instance=ExtResource("3_tlwt5")]
+process_mode = 3
+resources = Array[ExtResource("4_gbfbk")]([ExtResource("5_ioo17"), ExtResource("6_ioo17"), ExtResource("7_gbfbk")])
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=1024235793]
+environment = SubResource("Environment_ioo17")
+script = ExtResource("9_wse8f")
+
+[node name="apple tree2" parent="." unique_id=790076385 instance=ExtResource("5_036b0")]
+transform = Transform3D(0.89248353, -0.019675836, 0.4506507, 0, 0.9990482, 0.043619387, -0.45108005, -0.03892958, 0.89163405, -10.128883, 0.01498884, 36.378944)
+
+[node name="MeshInstance3D15" type="MeshInstance3D" parent="." unique_id=1157815901]
+transform = Transform3D(100, 0, 0, 0, 100, 0, 0, 0, 100, 100, -50, 0)
+mesh = SubResource("BoxMesh_k3n1d")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="MeshInstance3D15" unique_id=1717231940]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeshInstance3D15/StaticBody3D" unique_id=1417120677]
+shape = SubResource("ConcavePolygonShape3D_2o6r5")
+
+[node name="BasicBiome" parent="." unique_id=589233721 instance=ExtResource("12_k3n1d")]
+
+[node name="ForestBiome" parent="." unique_id=895990909 instance=ExtResource("11_ic0uy")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -100, 0, 0)
+
+[node name="ground item" parent="." unique_id=1507048318 instance=ExtResource("12_2o6r5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.0875735, 0)
+item_data = ExtResource("13_70uel")

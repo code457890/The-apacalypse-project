@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://crscqkx8bmn8j"]
+
+[ext_resource type="Script" uid="uid://wgg5fk62cl4a" path="res://item.gd" id="1_n6ldg"]
+[ext_resource type="PackedScene" uid="uid://dyke6wtcc6bt1" path="res://apple_sapling.tscn" id="1_nqvq6"]
+[ext_resource type="Script" uid="uid://b2okcvsdhbro" path="res://plantplaceable.gd" id="2_k3bdc"]
+[ext_resource type="Texture2D" uid="uid://ct0chl4bh2k5p" path="res://Untitled7.png" id="2_vri8i"]
+
+[sub_resource type="Resource" id="Resource_ympsk"]
+script = ExtResource("2_k3bdc")
+scene = ExtResource("1_nqvq6")
+tags = Array[String](["basic patch"])
+metadata/_custom_type_script = "uid://b2okcvsdhbro"
+
+[resource]
+script = ExtResource("1_n6ldg")
+name = "Apple sapling"
+description = "A basic apple tree sapling from a regular apple tree. click on a patch to plant!"
+icon = ExtResource("2_vri8i")
+recipe = Array[Resource]([null])
+type = 3
+effect = SubResource("Resource_ympsk")
+metadata/_custom_type_script = "uid://wgg5fk62cl4a"

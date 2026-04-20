@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://ctynvhdixmedv"]
+
+[ext_resource type="Texture2D" uid="uid://b865n0aerxs2x" path="res://Untitled5.png" id="1_50i0y"]
+[ext_resource type="Script" uid="uid://wgg5fk62cl4a" path="res://item.gd" id="1_cdyvl"]
+[ext_resource type="Resource" uid="uid://c0lyptswmqcc1" path="res://flimsy rope.tres" id="2_oon6e"]
+[ext_resource type="Resource" uid="uid://bht72tu4kvb43" path="res://wood.tres" id="3_oon6e"]
+
+[resource]
+script = ExtResource("1_cdyvl")
+name = "Flimsy Axe"
+description = "A flimsy axe capeable of destroying trees faster."
+icon = ExtResource("1_50i0y")
+recipe = Array[Resource]([ExtResource("2_oon6e"), ExtResource("3_oon6e"), ExtResource("3_oon6e")])
+durability = 15
+type = 0
+effect = 2
+metadata/_custom_type_script = "uid://wgg5fk62cl4a"

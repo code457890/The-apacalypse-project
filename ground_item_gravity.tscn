@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://dtp523pwu1j1t"]
+
+[ext_resource type="Script" uid="uid://bw48li3drimgy" path="res://grond_item_gravity.gd" id="1_7hhdp"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_4dgf1"]
+
+[node name="ground item" type="RigidBody3D"]
+script = ExtResource("1_7hhdp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.1, 0, 0, 0)
+shape = SubResource("BoxShape3D_4dgf1")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, 0, 0, 0)

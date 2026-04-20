@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://xja6p05m3pox"]
+
+[ext_resource type="Script" uid="uid://wgg5fk62cl4a" path="res://item.gd" id="1_bws4f"]
+[ext_resource type="Texture2D" uid="uid://go68d4oaatco" path="res://Untitled10.png" id="1_mb4nn"]
+
+[resource]
+script = ExtResource("1_bws4f")
+name = "Grape"
+description = "a grape from a grapevine growing on a tree"
+icon = ExtResource("1_mb4nn")
+recipe = Array[Resource]([null])
+type = 4
+effect = 10
+metadata/_custom_type_script = "uid://wgg5fk62cl4a"

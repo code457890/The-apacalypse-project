@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://dl7lgvi4jl2le"]
+
+[ext_resource type="Script" uid="uid://wgg5fk62cl4a" path="res://item.gd" id="1_86ios"]
+[ext_resource type="Texture2D" uid="uid://b6l6s7s3cjn6m" path="res://OIP-removebg-preview__3_-removebg-preview.png" id="1_fvai0"]
+
+[resource]
+script = ExtResource("1_86ios")
+icon = ExtResource("1_fvai0")
+durability = 0
+effect = null
+metadata/_custom_type_script = "uid://wgg5fk62cl4a"

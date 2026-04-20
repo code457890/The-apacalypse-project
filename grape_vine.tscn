@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://bntxud0w6ofbr"]
+
+[ext_resource type="Script" uid="uid://cbwwmit5r0pmx" path="res://grape_vine.gd" id="1_bu366"]
+[ext_resource type="PackedScene" uid="uid://deasa72vs4hyt" path="res://grond_item.tscn" id="2_48lh7"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_a0meq"]
+albedo_color = Color(0, 1, 0, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_a6nxa"]
+material = SubResource("StandardMaterial3D_a0meq")
+
+[node name="GrapeVine" type="Node3D" unique_id=1965302269]
+script = ExtResource("1_bu366")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="." unique_id=536028773]
+transform = Transform3D(1.5, 0, 0, 0, 1, 0, 0, 0, 1.5, -0.65, 0, -0.15)
+mesh = SubResource("BoxMesh_a6nxa")
+
+[node name="ground item" parent="." unique_id=536325081 instance=ExtResource("2_48lh7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.19870281, 0, 0)
+
+[node name="ground item2" parent="." unique_id=620050002 instance=ExtResource("2_48lh7")]
+transform = Transform3D(-0.99696213, 0, -0.07788811, 0, 1, 0, 0.07788811, 0, -0.99696213, -0.914031, 0, -1.0729933)
+
+[node name="ground item3" parent="." unique_id=765030648 instance=ExtResource("2_48lh7")]
+transform = Transform3D(-0.99792904, 0, 0.06432413, 0, 1, 0, -0.06432413, 0, -0.99792904, -1.6094892, 0, 0.17883202)

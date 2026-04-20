@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://deasa72vs4hyt"]
+
+[ext_resource type="Script" uid="uid://bgl3yau32p26v" path="res://grond_item.gd" id="1_flhdp"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_flhdp"]
+
+[node name="ground item" type="Area3D"]
+script = ExtResource("1_flhdp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+shape = SubResource("SphereShape3D_flhdp")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(0.125, 0, 0, 0, 0.125, 0, 0, 0, 0.125, 0, 0, 0)

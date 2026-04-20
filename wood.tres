@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://bht72tu4kvb43"]
+
+[ext_resource type="Texture2D" uid="uid://cu08iyqsfpywl" path="res://Untitled.png" id="1_b45ae"]
+[ext_resource type="Script" uid="uid://wgg5fk62cl4a" path="res://item.gd" id="1_jduw4"]
+
+[resource]
+script = ExtResource("1_jduw4")
+name = "Chopped wood"
+description = "Regular chopped wood from a tree."
+icon = ExtResource("1_b45ae")
+recipe = Array[Resource]([null])
+effect = null
+metadata/_custom_type_script = "uid://wgg5fk62cl4a"

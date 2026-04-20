@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://fcnxpf4bahl5"]
+
+[ext_resource type="Texture2D" uid="uid://ycgcyuk2noo8" path="res://Untitled8.png" id="1_jahgl"]
+[ext_resource type="Script" uid="uid://wgg5fk62cl4a" path="res://item.gd" id="1_w4jda"]
+
+[resource]
+script = ExtResource("1_w4jda")
+name = "Peach"
+description = "a basic peach from a tree."
+icon = ExtResource("1_jahgl")
+recipe = Array[Resource]([null])
+type = 4
+effect = 25
+metadata/_custom_type_script = "uid://wgg5fk62cl4a"

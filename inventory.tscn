@@ -1,0 +1,166 @@
+[gd_scene format=3 uid="uid://bhwvc7rieo13o"]
+
+[ext_resource type="Script" uid="uid://b61c6y0as3vkw" path="res://inventory.gd" id="1_pohso"]
+[ext_resource type="Texture2D" uid="uid://3wwesdbk8wc7" path="res://Untitled3.png" id="2_psafj"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pohso"]
+bg_color = Color(0.8197898, 0.1325092, 0.26802754, 1)
+
+[node name="CanvasLayer" type="CanvasLayer" unique_id=739294338 groups=["Inventory"]]
+script = ExtResource("1_pohso")
+
+[node name="background" type="Control" parent="." unique_id=71220676]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -568.0
+offset_top = -276.0
+offset_right = -176.0
+offset_bottom = 196.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="background" unique_id=1801310296]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.043
+anchor_top = 0.5
+anchor_right = 0.043
+anchor_bottom = 0.5
+offset_left = -24.856
+offset_top = -284.0
+offset_right = 686.2
+offset_bottom = 364.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="GridContainer" type="GridContainer" parent="background/Panel" unique_id=953602770]
+layout_mode = 0
+offset_top = 216.0
+offset_right = 1152.0
+offset_bottom = 256.0
+columns = 4
+
+[node name="background2" type="Control" parent="." unique_id=857941930]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 184.0
+offset_top = -236.0
+offset_right = 576.0
+offset_bottom = 236.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="background2" unique_id=598743120]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.043
+anchor_top = 0.5
+anchor_right = 0.043
+anchor_bottom = 0.5
+offset_left = 23.144
+offset_top = -324.0
+offset_right = 374.20004
+offset_bottom = 324.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="GridContainer" type="GridContainer" parent="background2/Panel" unique_id=1635730546]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 256.0
+offset_right = 288.0
+offset_bottom = 384.0
+columns = 2
+
+[node name="Button" type="Button" parent="background2" unique_id=193211310]
+layout_mode = 0
+offset_left = 32.0
+offset_right = 400.0
+offset_bottom = 108.0
+icon = ExtResource("2_psafj")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=291235100]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -5.0
+offset_top = -5.0
+offset_right = 5.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=546210409]
+anchors_preset = -1
+anchor_left = 0.49600002
+anchor_top = 0.84000003
+anchor_right = 0.49600002
+anchor_bottom = 0.84000003
+offset_left = -147.39203
+offset_top = -16.320007
+offset_right = 140.60797
+offset_bottom = 10.679993
+theme_override_styles/background = SubResource("StyleBoxFlat_pohso")
+value = 100.0
+show_percentage = false
+
+[node name="background3" type="Control" parent="." unique_id=1688516205]
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="background3" unique_id=331847205]
+layout_mode = 0
+offset_left = -196.0
+offset_top = -16.0
+offset_right = 204.0
+offset_bottom = 24.0
+alignment = 1
+
+[node name="ProgressBar2" type="ProgressBar" parent="." unique_id=926332879]
+anchors_preset = -1
+anchor_left = 0.49300003
+anchor_top = 0.74100006
+anchor_right = 0.49300003
+anchor_bottom = 0.74100006
+offset_left = -143.93604
+offset_top = -16.16803
+offset_right = 144.06396
+offset_bottom = 10.83197
+grow_horizontal = 2
+grow_vertical = 0
+max_value = 1.0
+value = 1.0
+rounded = true
+show_percentage = false
+
+[node name="Control" type="Control" parent="." unique_id=690346951]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="item" type="TextureRect" parent="Control" unique_id=1492487969]
+layout_mode = 0
+offset_top = 400.0
+offset_bottom = 400.0
+
+[connection signal="pressed" from="background2/Button" to="." method="_on_button_pressed"]
