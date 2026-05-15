@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://34komartqyo6"]
+
+[ext_resource type="Texture2D" uid="uid://b25wup2ldu81w" path="res://Untitled17.png" id="1_eivs4"]
+[ext_resource type="Script" uid="uid://wgg5fk62cl4a" path="res://item.gd" id="1_wfdvg"]
+[ext_resource type="Resource" uid="uid://ctynvhdixmedv" path="res://flimsy_axe.tres" id="2_m3156"]
+[ext_resource type="Resource" uid="uid://dqfwea38sax5" path="res://strong_wood.tres" id="3_aldfg"]
+[ext_resource type="Resource" uid="uid://bj2iokrredhob" path="res://flimsy_rope_deluxe.tres" id="4_m82k5"]
+
+[resource]
+script = ExtResource("1_wfdvg")
+name = "Slightly Stronger Flimsy Axe"
+icon = ExtResource("1_eivs4")
+recipe = Array[Resource]([ExtResource("2_m3156"), ExtResource("3_aldfg"), ExtResource("4_m82k5")])
+durability = 25
+type = 0
+effect = 3
+metadata/_custom_type_script = "uid://wgg5fk62cl4a"

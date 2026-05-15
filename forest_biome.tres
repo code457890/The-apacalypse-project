@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="BiomeData" format=3 uid="uid://cy4mdfa4qspvi"]
+
+[ext_resource type="PackedScene" uid="uid://mtnp074qk3yi" path="res://forest_biome.tscn" id="1_ew4br"]
+[ext_resource type="Script" uid="uid://eo1j24l1xv7h" path="res://biome.gd" id="1_kiki4"]
+
+[resource]
+script = ExtResource("1_kiki4")
+name = "forest biome"
+description = "its... a forest."
+scene = ExtResource("1_ew4br")
+metadata/_custom_type_script = "uid://eo1j24l1xv7h"

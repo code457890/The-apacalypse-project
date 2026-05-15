@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://dqfwea38sax5"]
+
+[ext_resource type="Texture2D" uid="uid://c84mcpvytiklw" path="res://Untitled12.png" id="1_25cal"]
+[ext_resource type="Script" uid="uid://wgg5fk62cl4a" path="res://item.gd" id="1_vd3l2"]
+
+[resource]
+script = ExtResource("1_vd3l2")
+name = "Strong Wood"
+description = "What do you expect? the name should be self explanitory."
+icon = ExtResource("1_25cal")
+effect = null
+metadata/_custom_type_script = "uid://wgg5fk62cl4a"

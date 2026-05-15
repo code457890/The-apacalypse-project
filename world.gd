@@ -1,6 +1,6 @@
 extends Node3D
 
-var posbiomes = [{'name': 'grass', 'data':load("res://basic_biome.tres")},{'name': 'forest'},{'name': 'river'},{'name': 'cave'},{'name': 'desert'},{'name': 'mountains'},{'name': 'pond'}]
+var posbiomes = [{'name': 'grass', 'data':load("res://basic_biome.tres")},{'name': 'forest', 'data':load('res://forest_biome.tres')},{'name': 'desert'},{'name': 'mountains'},{'name': 'pond', 'data': load("res://pond_biome.tres")}]
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

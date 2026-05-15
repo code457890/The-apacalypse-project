@@ -2,7 +2,7 @@ extends StaticBody3D
 
 # Settings
 @export var max_health = 8
-@export var health = max_health
+@onready var health = max_health
 
 # LOOT SETTINGS
 @export var loot_scene : PackedScene   # Drag 'ground_item.tscn' here
@@ -39,7 +39,7 @@ func chop_down():
 	
 	
 	# 2. Spawn Leaf (Maybe give it a random chance? e.g. 50%)
-	if rng.randf_range(0.0, 3.0) > 1.0: spawn_item(leaf_data)
+	for i in range(rng.randi_range(1,4)): spawn_item(leaf_data)
 	
 	if rng.randf_range(1.5, 2.0) > 1.0: 
 		for i in range(rng.randi_range(1,2)):
@@ -71,7 +71,4 @@ func spawn_item(data):
 	new_item.global_position = global_position + offset
 
 func _ready() -> void:
-	# Initialize with a seed (optional)
-	#OR use time-based seed:
-	# Seeds with current time
-	if sapling_data != null: sapling_data = load("res://peach_sapling.tres")
+	if sapling_data != null: sapling_data = load("res://banana_sapling.tres")

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://cai22ge4m7cpb"]
+
+[ext_resource type="Texture2D" uid="uid://c56kuun67fho4" path="res://Untitled15.png" id="1_fqmak"]
+[ext_resource type="Script" uid="uid://wgg5fk62cl4a" path="res://item.gd" id="1_ydxdj"]
+
+[resource]
+script = ExtResource("1_ydxdj")
+name = "Banana"
+description = "Minions! Tonight, we steal... ZA MOON!!!!!!!!!!!!!!!!!!!!!!"
+icon = ExtResource("1_fqmak")
+type = 4
+effect = 20
+metadata/_custom_type_script = "uid://wgg5fk62cl4a"

@@ -12,7 +12,7 @@ extends StaticBody3D
 
 func hit(healthbar: ProgressBar, item: ItemData):
 	if preload("res://item.gd").Type.axe == item.type:
-		health -= 2
+		health -= item.effect
 		if health <= 0:
 			chop_down()
 		healthbar.max_value = max_health

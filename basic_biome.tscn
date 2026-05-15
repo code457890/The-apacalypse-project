@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://cm7c77stmvpyh" path="res://tree.tscn" id="1_1owln"]
 [ext_resource type="PackedScene" uid="uid://qgk2if58b1u1" path="res://apple_tree.tscn" id="2_xo43e"]
 [ext_resource type="PackedScene" uid="uid://bkfh6kiu3vamo" path="res://plantable.tscn" id="3_5j87c"]
+[ext_resource type="PackedScene" uid="uid://dsusgnp2osflc" path="res://bananatreeeeeeeeeeeee.tscn" id="4_xo43e"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ioo17"]
 albedo_color = Color(0, 1, 0, 1)
@@ -245,3 +246,6 @@ tag = "basic patch"
 
 [node name="apple tree2" parent="." unique_id=1180502969 instance=ExtResource("2_xo43e")]
 transform = Transform3D(0.89248353, -0.019675836, 0.4506507, 0, 0.9990482, 0.043619387, -0.45108005, -0.03892958, 0.89163405, -10.128883, 0.01498884, 36.378944)
+
+[node name="bananatreeeeeeeeeeeee" parent="." unique_id=442699408 instance=ExtResource("4_xo43e")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -11.044705, 0, 0)

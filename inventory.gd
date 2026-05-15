@@ -52,6 +52,7 @@ func craft():
 	# Step 1: Count items in the crafting grid
 	var grid_counts = {}
 	for slot in crafting_grid.get_children():
+		@warning_ignore("shadowed_variable")
 		var item = slot.get_child(1).item_data
 		if item != preload("res://none.tres"):
 			grid_counts[item] = grid_counts.get(item, 0) + 1
@@ -82,8 +83,10 @@ func craft():
 		if can_craft:
 			print(grid_counts, required_counts)
 			# Add the crafted item(s)
-			for item in recipe_item.craft_amount:
-				add_item(item, item.durability-5 if item.type in load("res://item.gd").tools else item.durability)
+			@warning_ignore("shadowed_variable")
+			for item in recipe_item.craft_amount.keys():
+				for _i in recipe_item.craft_amount[item]:
+					add_item(item, item.durability-5 if item.type in load("res://item.gd").tools else item.durability)
 			add_item(recipe_item, recipe_item.durability)
 			# Remove ingredients from the inventory/grid
 			for ingredient in recipe_item.recipe:
@@ -111,6 +114,7 @@ func add_item(item_data, dur: int):
 			print("Slot ", slot.name, " is full.")
 			
 	print("Inventory is full (Loop finished)")
+@warning_ignore("shadowed_variable")
 func remove_item(item: ItemData):
 	print(item)
 		

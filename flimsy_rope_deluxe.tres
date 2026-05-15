@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://bj2iokrredhob"]
+
+[ext_resource type="Texture2D" uid="uid://bhdu4m8ofu7jg" path="res://Untitled16.png" id="1_8htx5"]
+[ext_resource type="Script" uid="uid://wgg5fk62cl4a" path="res://item.gd" id="1_g83io"]
+[ext_resource type="Resource" uid="uid://c0lyptswmqcc1" path="res://flimsy rope.tres" id="2_namul"]
+[ext_resource type="Resource" uid="uid://dswsbk0xk88qd" path="res://banana_leaf.tres" id="3_i25lc"]
+
+[resource]
+script = ExtResource("1_g83io")
+name = "Slightly Stronger Flimsy Rope"
+description = "*huffs* slightly stronger flimsy rope *gasps* mouthfull."
+icon = ExtResource("1_8htx5")
+recipe = Array[Resource]([ExtResource("2_namul"), ExtResource("3_i25lc"), ExtResource("3_i25lc")])
+effect = null
+metadata/_custom_type_script = "uid://wgg5fk62cl4a"

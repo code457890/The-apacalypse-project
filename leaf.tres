@@ -2,15 +2,12 @@
 
 [ext_resource type="Texture2D" uid="uid://yse43qqb8207" path="res://Untitled2.png" id="1_7tg7c"]
 [ext_resource type="Script" uid="uid://wgg5fk62cl4a" path="res://item.gd" id="1_ooxnh"]
-[ext_resource type="Resource" uid="uid://bht72tu4kvb43" path="res://wood.tres" id="2_4nkjw"]
 
 [resource]
 script = ExtResource("1_ooxnh")
 name = "leaves"
 description = "leaves from a regular tree."
 icon = ExtResource("1_7tg7c")
-recipe = Array[Resource]([ExtResource("2_4nkjw")])
-craft_amount = 3
-type = 4
-effect = 5
+recipe = Array[Resource]([null])
+effect = null
 metadata/_custom_type_script = "uid://wgg5fk62cl4a"

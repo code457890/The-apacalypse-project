@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://dswsbk0xk88qd"]
+
+[ext_resource type="Script" uid="uid://wgg5fk62cl4a" path="res://item.gd" id="1_cy5ji"]
+[ext_resource type="Texture2D" uid="uid://b25dnhv2m25as" path="res://Untitled14.png" id="1_m8fna"]
+
+[resource]
+script = ExtResource("1_cy5ji")
+name = "Banana Leaf"
+description = "Hmm...   looks stronger than regular leaf..."
+icon = ExtResource("1_m8fna")
+recipe = Array[Resource]([null])
+effect = null
+metadata/_custom_type_script = "uid://wgg5fk62cl4a"

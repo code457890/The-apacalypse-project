@@ -17,9 +17,7 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 config/name="apacalypse"
 run/main_scene="uid://c1ufqwqxoh4d3"
 config/features=PackedStringArray("4.7", "Forward Plus")
-boot_splash/bg_color=Color(0.29411766, 0.29411766, 1, 1)
-boot_splash/show_image=false
-boot_splash/image="uid://cu08iyqsfpywl"
+boot_splash/image="uid://d2aqb8yhpae47"
 config/icon="res://icon.svg"
 
 [global_group]

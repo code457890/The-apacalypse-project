@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://clk2hbsepeaku"]
+
+[ext_resource type="Texture2D" uid="uid://cm7ye6ptoey60" path="res://Untitled14_not_13_bc_the_french_will_hehe_me_srry.png" id="1_6mw03"]
+[ext_resource type="Script" uid="uid://wgg5fk62cl4a" path="res://item.gd" id="1_o5m0f"]
+[ext_resource type="PackedScene" uid="uid://bf8pglobgu7vc" path="res://banana_sapling.tscn" id="1_tk014"]
+[ext_resource type="Script" uid="uid://b2okcvsdhbro" path="res://plantplaceable.gd" id="2_eb53x"]
+
+[sub_resource type="Resource" id="Resource_qgkje"]
+script = ExtResource("2_eb53x")
+scene = ExtResource("1_tk014")
+tags = Array[String](["basic patch"])
+metadata/_custom_type_script = "uid://b2okcvsdhbro"
+
+[resource]
+script = ExtResource("1_o5m0f")
+name = "Banana Sapling"
+description = "...         read from another sapling, my hands hurt. "
+icon = ExtResource("1_6mw03")
+type = 3
+effect = SubResource("Resource_qgkje")
+metadata/_custom_type_script = "uid://wgg5fk62cl4a"
